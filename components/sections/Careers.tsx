@@ -9,7 +9,9 @@ type Status = 'idle' | 'loading' | 'success' | 'error';
 const positions = [
   'SEO Specialist',
   'PPC / Paid Media Manager',
-  'Full-Stack Developer (Next.js)',
+  'Full-Stack Developer ',
+  'Graphic Designer',
+  'Mobile App Developer',
   'Video Editor & Motion Designer',
   'Social Media Manager',
   'UI/UX Designer',
@@ -142,7 +144,7 @@ export default function Careers() {
                   onChange={(e) => setName(e.target.value)}
                   required
                   disabled={status === 'loading'}
-                  placeholder="Jane Doe"
+                  placeholder=""
                   className="w-full rounded-xl border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all disabled:opacity-50"
                 />
               </div>
@@ -160,7 +162,7 @@ export default function Careers() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   disabled={status === 'loading'}
-                  placeholder="jane@email.com"
+                  placeholder=""
                   className="w-full rounded-xl border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-fuchsia-500/50 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/20 transition-all disabled:opacity-50"
                 />
               </div>
