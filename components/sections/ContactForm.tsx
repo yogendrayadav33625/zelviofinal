@@ -11,6 +11,7 @@ const serviceOptions = [
   'Paid Advertising & PPC',
   'Web & App Development',
   'E-Commerce Store',
+  'Graphic Designer',
   'Social Media Management',
   'Content & Copywriting',
   'Video Editing & Motion Graphics',
@@ -116,7 +117,7 @@ export default function ContactForm() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 disabled={status === 'loading'}
-                placeholder="Jane Doe"
+                placeholder=""
                 className="w-full rounded-xl border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all disabled:opacity-50"
               />
             </div>
@@ -134,7 +135,7 @@ export default function ContactForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={status === 'loading'}
-                placeholder="jane@company.com"
+                placeholder=""
                 className="w-full rounded-xl border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-fuchsia-500/50 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/20 transition-all disabled:opacity-50"
               />
             </div>
