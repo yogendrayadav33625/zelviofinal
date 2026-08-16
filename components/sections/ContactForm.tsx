@@ -40,7 +40,7 @@ export default function ContactForm() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${anonKey}`,
+        
         },
         body: JSON.stringify({
           type: 'contact',
