@@ -41,16 +41,30 @@ export default function AdminDashboard() {
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const resp = await fetch(`/api/admin-data?t=${Date.now()}`, {
-  cache: 'no-store',
-  headers: {
-    Authorization: `Bearer ${p}`,
-  },
-}); 
-        headers: {
-          Authorization: `Bearer ${keyInput}`,
-        },
-      });
+     const fetchData = useCallback(async () => {
+  setLoading(true);
+
+  try {
+    const resp = await fetch(`/api/admin-data?t=${Date.now()}`, {
+      cache: 'no-store',
+      headers: {
+        Authorization: `Bearer ${keyInput}`,
+      },
+    });
+
+    if (!resp.ok) {
+      throw new Error('Unauthorized');
+    }
+
+    const json = await resp.json();
+    setData(json);
+  } catch {
+    setAuthError('Invalid admin key');
+    setAuthed(false);
+  } finally {
+    setLoading(false);
+  }
+}, [keyInput]); 
 
       if (!resp.ok) {
         throw new Error('Unauthorized');
