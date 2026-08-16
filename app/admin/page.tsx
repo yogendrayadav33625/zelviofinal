@@ -41,7 +41,12 @@ export default function AdminDashboard() {
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const resp = await fetch('/api/admin-data', {
+      const resp = await fetch(`/api/admin-data?t=${Date.now()}`, {
+  cache: 'no-store',
+  headers: {
+    Authorization: `Bearer ${p}`,
+  },
+}); 
         headers: {
           Authorization: `Bearer ${keyInput}`,
         },
@@ -139,7 +144,7 @@ export default function AdminDashboard() {
           </form>
 
           <p className="mt-4 text-xs text-muted-foreground/60 text-center">
-            Default key: zelvio-admin-2026 (change via ADMIN_KEY secret)
+   
           </p>
         </motion.div>
       </div>
