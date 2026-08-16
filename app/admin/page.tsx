@@ -63,19 +63,7 @@ export default function AdminDashboard() {
   }
 }, [keyInput]); 
 
-      if (!resp.ok) {
-        throw new Error('Unauthorized');
-      }
-
-      const json = await resp.json();
-      setData(json);
-    } catch {
-      setAuthError('Invalid admin key');
-      setAuthed(false);
-    } finally {
-      setLoading(false);
-    }
-  }, [supabaseUrl, keyInput]);
+      
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
