@@ -123,7 +123,7 @@ export default function Hero() {
           {[
             { icon: ShoppingBag, label: 'E-Commerce Stores' },
             { icon: Smartphone, label: 'Mobile Apps' },
-            { icon: Code2, label: 'Next.js Websites' },
+            { icon: Code2, label: 'Websites' },
           ].map((item) => (
             <div
               key={item.label}
