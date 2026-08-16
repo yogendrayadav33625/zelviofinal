@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-
+export const dynamic = "force-dynamic";
 export async function GET(req: Request) {
   try {
     const authHeader = req.headers.get("authorization") || "";
@@ -65,10 +65,17 @@ export async function GET(req: Request) {
       );
     }
 
-    return NextResponse.json({
-      contacts: contactsResult.data || [],
-      jobs: jobsResult.data || [],
-    });
+   return NextResponse.json(
+  {
+    contacts: contactsResult.data || [],
+    jobs: jobsResult.data || [],
+  },
+  {
+    headers: {
+      "Cache-Control": "no-store, no-cache, must-revalidate",
+    },
+  }
+); 
   } catch (error) {
     console.error("Admin data error:", error);
 
