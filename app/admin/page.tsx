@@ -41,7 +41,7 @@ export default function AdminDashboard() {
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const resp = await fetch(`${supabaseUrl}/functions/v1/admin-data`, {
+      const resp = await fetch('/api/admin-data', {
         headers: {
           Authorization: `Bearer ${keyInput}`,
         },
