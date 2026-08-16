@@ -39,9 +39,6 @@ export default function AdminDashboard() {
   const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || '';
 
   const fetchData = useCallback(async () => {
-    setLoading(true);
-    try {
-     const fetchData = useCallback(async () => {
   setLoading(true);
 
   try {
