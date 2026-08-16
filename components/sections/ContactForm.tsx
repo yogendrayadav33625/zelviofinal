@@ -10,6 +10,7 @@ const serviceOptions = [
   'SEO & Performance',
   'Paid Advertising & PPC',
   'Web & App Development',
+  'Website Development',
   'E-Commerce Store',
   'Graphic Designer',
   'Social Media Management',
