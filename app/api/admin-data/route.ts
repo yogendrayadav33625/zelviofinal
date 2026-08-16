@@ -64,6 +64,10 @@ export async function GET(req: Request) {
         { status: 500 }
       );
     }
+    console.log("ADMIN DATA:", {
+  contacts: contactsResult.data,
+  jobs: jobsResult.data,
+});
 
    return NextResponse.json(
   {
