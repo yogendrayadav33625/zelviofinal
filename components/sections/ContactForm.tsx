@@ -25,6 +25,7 @@ const serviceOptions = [
 export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [Contact, setContact] = useState('');
   const [serviceType, setServiceType] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
