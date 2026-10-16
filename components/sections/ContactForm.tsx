@@ -8,7 +8,7 @@ type Status = 'idle' | 'loading' | 'success' | 'error';
 
 const serviceOptions = [
   'SEO & Performance',
-  'Paid Advertising & PPC',
+  'Paid Advertising & Paid promotion',
   'Web & App Development',
   'Website Development',
   'E-Commerce Store',
