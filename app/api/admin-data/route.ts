@@ -7,7 +7,7 @@ export async function GET(req: Request) {
     const adminKey = authHeader.replace(/^Bearer\s+/i, "");
 
     const expectedAdminKey =
-      process.env.ADMIN_KEY || "zelvio-admin-2026";
+      process.env.ADMIN_KEY || "Bhai@0786";
 
     if (!adminKey || adminKey !== expectedAdminKey) {
       return NextResponse.json(
